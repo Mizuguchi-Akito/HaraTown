@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>仮置きです。</h1>
-<p>nakano</p>
+　　<p>nakano</p>
     <p class="red">※注意</p>
     <p class="red">競合を防ぐため、mainブランチにはコミットしないでください。</p>
 </body>
