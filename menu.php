@@ -1,8 +1,10 @@
+<?php session_start(); ?>
 <?php
 if (!(isset($_SESSION['customer']))) {
 ?>
 <a href="login_input.php">ログイン</a><br>
-<a href="./Main_Top.php">TOPへ戻る</a>
+<a href="./Main_Top.php">TOPへ戻る</a><br>
+<a href="./customer_input.php">会員登録</a><br>
 <?php
 }
 ?>

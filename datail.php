@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>商品詳細画面</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -26,7 +26,7 @@
 
 	foreach ($result as $row) {
 	?>
-		<p><img src="image/<?= $row['id'] ?>.jpg"></p>
+		<p><img src="image/<?= $row['id'] ?>.jpeg" class="clothes"></p>
 		<form action="cart_insert.php" method="post">
 			<p>商品番号：<?= $row['id'] ?></p>
 			<p>商品名：<?= $row['name'] ?></p>

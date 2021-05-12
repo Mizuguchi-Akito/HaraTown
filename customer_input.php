@@ -15,9 +15,14 @@
 
 	<form action="customer_output.php" method="POST">
 	名前	<input type="text" name="name"><br>
-	アドレス<input type="text" name="address"><br>
+	住所<input type="text" name="address"><br>
 	ログインID<input type="text" name="login"><br>
 	パスワード<input type="password" name="password"><br>
+    クレジットカード名義<input type="text" name="credit_name"><br>
+    クレジットカード番号<input type="text" name="credit"><br>
+    クレジットカード日付<input type="text" name="credit_date"><br>
+    クレジットカードパスワード<input type="password" name="credit_pass"><br>
+    
 	<input type="submit" value="登録" >
 	</form>
 </body>

@@ -25,7 +25,8 @@
     $result = $stm->fetchAll(PDO::FETCH_ASSOC);
     foreach ($result as $row) {
         $_SESSION['customer'] = [
-            'id' => $row['id'], 'login' =>$row['login'],
+            'id' => $row['id'], 
+            'login' =>$row['login'],
             'password' => $row['password']
         ];
     }
@@ -45,7 +46,7 @@
                 <a href="./Main_Top.php">TOPへ戻る</a>
             <?php
         } else {
-            echo 'ログイン名またはパスワードが違います。';
+            echo 'ログイン名またはパスワードが違います。','<br>';
             ?>
                 <a href="./Main_Top.php">TOPへ戻る</a>
             <?php
