@@ -8,6 +8,7 @@
 </head>
 <body>
 	<?php require 'menu.php'; ?>
+	
 	<?php
 	    require 'db_connect.php';
 		$purchase_id = 1;
