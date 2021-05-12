@@ -17,9 +17,7 @@
 	?>
 	<p>お名前:<?= $_SESSION['customer']['name'] ?></p>
 	<p>ご住所:<?= $_SESSION['customer']['address'] ?></p>
-	<p>:<?= $_SESSION['customer'][''] ?></p>
-	<p>:<?= $_SESSION['customer'][''] ?></p>
-	<p>:<?= $_SESSION['customer'][''] ?></p>
+	<p>クレジットカード名義:<?= $_SESSION['customer']['credit_name'] ?></p>
 	<hr>
 	<?php require 'cart.php'; ?>
 	<hr>
