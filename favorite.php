@@ -11,8 +11,6 @@
             <th>商品名</th>
             <th>価格</th>
             <th>ブランド名</th>
-            <th>カラー</th>
-            <th>サイズ</th>
             <?php
             require 'db_connect.php';
             $sql = "select * from favorite, product where customer_id = :customer_id and product_id = id";
@@ -28,6 +26,7 @@
                     <td><?= $id ?></td>
                     <td><a href="detail.php?id=<?= $id ?>"><?= $row['name'] ?></a></td>
                     <td><?= $row['price'] ?></td>
+                    <td><?= $row['brand'] ?></td>
                     <td><a href="favorite_delete.php?id=<?= $id ?>">削除</a></td>
                 </tr>
             <?php
