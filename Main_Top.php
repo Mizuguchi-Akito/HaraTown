@@ -7,7 +7,7 @@
     <title>HaraTown</title>
 </head>
 <body>
-<main>
+<main  class="main">
         <article>
             <section>
                 <table>
@@ -26,9 +26,10 @@
                         $result = $stm->fetchAll(PDO::FETCH_ASSOC);
                         foreach ($result as $row) {
                             echo "<br>{$row['name']}" , "<br>";
-                            ?>
+                            ?><div class="image1">
+                            </div>
                                 <p class="p"><img src="image/<?= $row['id'] ?>.jpeg"  class="clothes"></p>
-                                <a href="./datail.php?id=<?= $row['id']?>">詳細</a><br>
+                                <a href="./datail.php?id=<?= $row['id']?>">詳細</a>
                                 <?php
                                 }
                             ?>
@@ -36,9 +37,9 @@
             </section>
         </article>
     </main><br>
-    <footer id='footer'>
+    <!-- <footer id='footer'>
         <hr>
        <p>Copyright c 2021 HaraTown All Rights Reserved.</p> 
-    </footer>
+    </footer> -->
 </body>
 </html>

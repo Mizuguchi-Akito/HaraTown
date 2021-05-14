@@ -1,8 +1,20 @@
 .clothes{
+    width: 20%;
+    height: 40%;
+    /* float: left; */
+}
+.main {
+    width: 2000px;
+    height: 1000px;
+}
+
+.image1 {
     width: 10%;
     height: 10%;
 }
-
-.red{
-    color: brown;
+.main2{
+    width: 100%;
+}
+.sub{
+    width: 10%;
 }
