@@ -11,16 +11,18 @@
 </head>
 
 <body>
+    <p class="red">HaraTown</p>
+
+    <head>
+
+        <?php require 'menu.php'; ?>
+    </head>
     <main class="main">
         <article>
             <section>
                 <table>
-                    <?php require 'menu.php'; ?>
                     <?php require 'db_connect.php'; ?>
                     <th colspan="2"></th>
-
-                    <h1 class="red">HaraTown</h1>
-
                     <h1 class="item">ITEM</h1>
 
                     <div class="box">
@@ -36,9 +38,9 @@
                         ?><div class="image1">
                             </div>
                             <p class="p"><img src="image/<?= $row['id'] ?>.jpeg" class="clothes"></p>
-                            <p class="item_"><?= $row['name'] ?></p>
-                            <p><?= $row['brand'] ?></p>
-                            <p><?= $row['price'] ?></p>
+                            <p class="item_detail"><?= $row['name'] ?></p>
+                            <p class="item_detail"><?= $row['brand'] ?></p>
+                            <p class="item_detail"><?= $row['price'] ?></p>
                             <a href="./detail.php?id=<?= $row['id'] ?>">詳細</a>
                     </div>
                 <?php

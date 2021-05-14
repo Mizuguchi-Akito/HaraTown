@@ -50,3 +50,14 @@
     margin: 0; 
     padding: 0;
 }
+
+.red{
+    font-size: large;
+    width: 50px;
+}
+
+.menu {
+    float: right;
+    margin: 0;
+}
+
