@@ -5,14 +5,15 @@
 <head>
 	<meta charset="UTF-8">
 	<title>購入画面</title>
-	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style3.css">
 </head>
 
 <body>
 	<?php require 'menu.php'; ?>
 	<?php
 		if(empty($_SESSION["customer"]) || empty($_SESSION["product"])){
-			echo "ログインしていないか、カートに商品がありません";
+			echo "<p class=big>ログインしていないか、カートに商品がありません</p>";
 		}else{
 			$customerId = $_SESSION["customer"]["id"];
 			$pdo;
@@ -46,7 +47,8 @@
 					$dataStm->execute();
 				}
 				unset($_SESSION["product"]);
-				echo "購入しました";
+				echo "<h1>商品を購入しました。</h1>";
+				echo "<p>商品ご到着までしばらくお待ちくださいませ。</p>";
 			}else{
 				echo "購入に失敗しました";
 			}

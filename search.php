@@ -6,6 +6,7 @@
 	<meta charset="UTF-8">
 	<title>商品検索</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style3.css">
 </head>
 
 <body>
@@ -16,7 +17,6 @@
 		<input type="text" name="keyword">
 		<input type="submit" value="検索">
 	</form>
-	<hr>
 	<table>
 		<th>商品名</th>
 		<th>価格</th>

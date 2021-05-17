@@ -1,20 +1,77 @@
-.clothes{
-    width: 20%;
-    height: 40%;
+.clothes {
+    width: 300px;
+    height: 420px;
+    object-fit: cover;
+   
     /* float: left; */
 }
-.main {
-    width: 2000px;
-    height: 1000px;
+
+.box {
+    float: left;
+    padding-left: 22px;
+    padding-right: 22px;
 }
 
-.image1 {
-    width: 10%;
-    height: 10%;
+.item {
+    font-family: 'Quicksand', sans-serif;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 500px;
+    position: relative;
+    padding:0.25em 1em;
+    font-size: x-large;
+    text-align: center;
+    background-color: rgba(196, 226, 230, 0.308);
+    user-select: none; /* CSS3 */
+    -moz-user-select: none; /* Firefox */
+    -webkit-user-select: none; /* Safari、Chromeなど */
+    -ms-user-select: none; /* IE10かららしい */
 }
-.main2{
+.item:before,.item:after{ 
+    content:'';
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    display: inline-block;
+}
+.item:before{
+    border-left: solid 1px #5767bf;
+    border-top: solid 1px #5767bf;
+    top:0;
+    left: 0;
+}
+.item:after{
+    border-right: solid 1px #5767bf;
+    border-bottom: solid 1px #5767bf;
+    bottom:0;
+    right: 0;
+}
+.item p {
+    margin: 0; 
+    padding: 0;
+}
+
+header {
+    position: fixed;
     width: 100%;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 10; /*レイヤーの重なり順を指定*/
 }
-.sub{
-    width: 10%;
+
+.red {
+    color: black;
+    font-size: xx-large;
+    padding-left: 10px;
+    padding-top: 10px;
+    user-select: none; /* CSS3 */
+    -moz-user-select: none; /* Firefox */
+    -webkit-user-select: none; /* Safari、Chromeなど */
+    -ms-user-select: none; /* IE10かららしい */
+    font-family: 'Anton', sans-serif;
+}
+.big{
+    font-size: x-large;
+    padding-left: 50px;
+    padding-right: 50px;
 }

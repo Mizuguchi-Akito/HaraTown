@@ -1,4 +1,6 @@
 <?php session_start(); ?>
+<link rel="stylesheet" href="css/style3.css">
+<?php require 'menu.php'; ?>
 <?php
 if (!empty($_SESSION['product'])) {
 ?>
@@ -39,7 +41,7 @@ if (!empty($_SESSION['product'])) {
 <?php
 } else {
 ?>
-	カートに商品がありません。
+	<h3>カートに商品が追加されていないようです。</h3>
 <?php
 }
 ?>

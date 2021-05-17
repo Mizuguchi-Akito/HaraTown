@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>お気に入り画面</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style3.css">
 </head>
 
 <body>
@@ -26,7 +26,8 @@
     <?php require 'favorite.php';
     } else {
     ?>
-        お気に入りから商品を削除するには、ログインしてください。
+            <h3>ログインしていないようです。</h3>
+        <p>お気に入りを削除するには、ログインしてください。</p> 
     <?php
     }
     ?>

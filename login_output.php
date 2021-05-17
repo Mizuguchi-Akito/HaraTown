@@ -41,7 +41,8 @@
 <body>
     <?php
         if (isset($_SESSION['customer'])) {
-            echo 'ログインしました。';
+            echo '<h3>ログインしました。</h3>';
+            echo '<p>おかえりなさいませ。</p>';
             ?>
                 <a href="./Main_Top.php">TOPへ戻る</a>
             <?php
