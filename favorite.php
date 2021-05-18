@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
+=======
+<link rel="stylesheet" href="css/style3.css">
+>>>>>>> 703b54a919b5ae1b659744c42ef257f1a6187e7b
 
 <body>
     <?php require 'menu.php'; ?>
@@ -26,7 +30,7 @@
             ?>
                 <tr>
                     <td><?= $id ?></td>
-                    <td><a href="detail.php?id=<?= $id ?>"><?= $row['name'] ?></a></td>
+                    <td><a href="datail.php?id=<?= $id ?>"><?= $row['name'] ?></a></td>
                     <td><?= $row['price'] ?></td>
                     <td><a href="favorite_delete.php?id=<?= $id ?>">削除</a></td>
                 </tr>
@@ -37,7 +41,8 @@
     <?php
     } else {
     ?>
-        お気に入りを表示するには、ログインしてください。
+        <h3>ログインしていないようです。</h3>
+        <p>お気に入りを表示するには、ログインしてください。</p>
     <?php
     }
     ?>

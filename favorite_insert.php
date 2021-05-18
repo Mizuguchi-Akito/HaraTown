@@ -3,37 +3,37 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
     <title>お気に入り画面</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <?php
-    if (isset($_SESSION['customer'])) {
-        //MySQLデータベースに接続する
-        require 'db_connect.php';
+	<?php
+	if (isset($_SESSION['customer'])) {
+		//MySQLデータベースに接続する
+		require 'db_connect.php';
 
-        //SQL文を作る（プレースホルダを使った式）
-        $sql = "insert into favorite values(:customer_id,:product_id)";
-        //プリペアードステートメントを作る
-        $stm = $pdo->prepare($sql);
-        //プリペアードステートメントに値をバインドする
-        $stm->bindValue(':customer_id', $_SESSION['customer']['id'], PDO::PARAM_STR);
-        $stm->bindValue(':product_id', $_REQUEST['id'], PDO::PARAM_STR);
-        //SQL文を実行する
-        $stm->execute();
-    ?>
-        お気に入りに商品を追加しました。
-        <hr>
-    <?php require 'favorite.php';
-    } else {
-    ?>
+		//SQL文を作る（プレースホルダを使った式）
+		$sql = "insert into favorite values(:customer_id,:product_id)";
+		//プリペアードステートメントを作る
+		$stm = $pdo->prepare($sql);
+		//プリペアードステートメントに値をバインドする
+		$stm->bindValue(':customer_id', $_SESSION['customer']['id'], PDO::PARAM_STR);
+		$stm->bindValue(':product_id', $_REQUEST['id'], PDO::PARAM_STR);
+		//SQL文を実行する
+		$stm->execute();
+	?>
+		お気に入りに商品を追加しました。
+		<hr>
+	<?php require 'favorite.php';
+	} else {
+	?>
         <h3>お気に入りに商品を追加するには、ログインしてください。</h3>
         <p><a href="./login_input.php">ログインへ</a></p>
-    <?php
-    }
-    ?>
+	<?php
+	}
+	?>
 </body>
 
 </html>
