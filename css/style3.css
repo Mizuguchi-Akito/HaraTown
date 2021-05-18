@@ -17,7 +17,7 @@
 	border: 3px solid transparent;
 	border-radius: 50%;
     background-color: #1b2538;
-    /* position: fixed; */
+    z-index: 2;
 }
 .menu div.menubar {
 	width: 30px;

@@ -5,13 +5,30 @@
 <head>
     <meta charset="UTF-8">
     <title>ログイン</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style3.css">
+
 </head>
-    <h3>お客様のログイン情報を教えてください。</h3>
+
 <body>
-    <form action="login_output.php" method="post">
-        ログインID<input type="text" name="login"><br>
-        パスワード<input type="password" name="password"><br>
-        <input type="submit" value="ログイン">
+    <div class="login">
+    <h2 class="active">Login</h2>
+    <form action="login_output.php" method="post" class="login_class">
+        <input type="text" class="login_text" name="login">
+     <span class="login_span">LoginID</span><br>
+        <input type="password" class="login_text" name="password">
+    <span class="login_span">password</span>
+    <br>
+
+    
+        
+        
+    <button class="signin">
+      Login
+    </button>
     </form>
-</body>
+    </div>
+
 </html>

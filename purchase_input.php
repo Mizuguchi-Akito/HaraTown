@@ -21,7 +21,7 @@
 	require_once("cart.php");
 	
 	if(!empty($_SESSION["product"])){?>
-		<a href="purchase_output.php">購入を確定する</a>
+		<a href="purchase_output.php" class="product_db">購入を確定する</a>
 		
 		<?php
 		};
