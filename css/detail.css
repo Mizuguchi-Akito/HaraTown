@@ -233,3 +233,7 @@ a.btn-svg:hover svg rect {
 a.btn-svg span {
   color: #000;
 }
+
+.size , .color{
+    font-size: medium;
+  }
