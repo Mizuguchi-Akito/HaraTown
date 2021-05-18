@@ -8,9 +8,12 @@
 	<title>会員登録画面</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/login.css">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 </head>
-<h3>会員登録に必要な事項を記入してください。</h3>
+<?php require 'menu.php'; ?>
 <body>
+	
     <?php
         if (!empty($_POST)) {
             /* 入力情報の不備を検知 */
@@ -60,19 +63,30 @@
         }
         ?>
 
-	<?php require 'menu.php'; ?>
-
+	
+	<div class="member">
 	<form action="customer_output.php" method="POST" class="main2">
-	名前	<input type="text" name="name" class="sub"><br>
-	住所<input type="text" name="address" class="sub"><br>
-	ログインID<input type="text" name="login" class="sub"><br>
-	パスワード<input type="password" name="password" class="sub"><br>
-    クレジットカード名義<input type="text" name="credit_name" class="sub"><br>
-    クレジットカード番号<input type="text" name="credit" class="sub"><br>
-    クレジットカード日付<input type="text" name="credit_date" class="sub"><br>
-    クレジットカードパスワード<input type="password" name="credit_pass" class="sub"><br>
-	<input type="submit" value="登録へ" >
+	<h3 class="customer_active">会員登録に必要な事項を記入してください。</h3><br>
+	<input type="text" class="login_text" name="name">
+	<span class="login_span">名前</span>
+	<br>
+	<input type="text" name="address" class="login_text">
+	<span class="login_span">住所</span><br>
+	<input type="text" name="login" class="login_text">
+	<span class="login_span">ログインID</span><br>
+	<input type="password" name="password" class="login_text">
+	<span class="login_span">パスワード</span><br>
+	<input type="text" name="credit_name" class="login_text">
+	<span class="login_span">クレジットカード名義</span><br>
+	<input type="text" name="credit" class="login_text">
+	<span class="login_span">クレジットカード番号</span><br>
+	<input type="text" name="credit_date" class="login_text">
+	<span class="login_span">クレジットカード日付</span><br>
+	<input type="password" name="credit_pass" class="login_text">
+	<span class="login_span">クレジットカードパスワード</span><br>
+	<input type="submit" value="登録へ" class="signin" >
 	</form>
+	</div>
 </body>
 
 </html>

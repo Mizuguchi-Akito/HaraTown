@@ -16,7 +16,8 @@
 	        transition: all 0.4s ease-in-out;
 	border: 3px solid transparent;
 	border-radius: 50%;
-	background-color: #1b2538;
+    background-color: #1b2538;
+    /* position: fixed; */
 }
 .menu div.menubar {
 	width: 30px;
