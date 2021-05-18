@@ -40,7 +40,7 @@
                     <p class="size">在庫のサイズ：<?= $row['size'] ?></p>
                     <!-- <div class="quantity_ipselect"> -->
                     <div class="cp_ipselect">
-                        <select class="cp_sl06" required>
+                        <select class="cp_sl06" required name="count">
                             <option value="" hidden disabled selected></option>
                             <?php
                             for ($i = 1; $i <= 10; $i++) {
@@ -64,17 +64,17 @@
             <input type="hidden" name="price" value="<?= $row['price'] ?>">
             <p class="cart_in"><input type="submit" class="button" value="カートに追加"></p>
             </div>
-            <p class="favorite"><a href="./favorite_insert.php?id=<?= $row['id'] ?>" class="btn btn-svg">
+            <p class="favorite"><a href="favorite_insert.php?id=<?= $row['id'] ?>"class="btn btn-svg">
                 <svg>
                     <rect x="2" y="2" rx="0" fill="none" width=200 height="50"></rect>
                 </svg>
                 <span>お気に入りに追加する</span>
             </a></p>
         </form>
-        <!-- <p><a href="favorite_insert.php?id=<?= $row['id'] ?>">お気に入りに追加</a></p> -->
     <?php
     }
     ?>
+        <!-- <p><a href="favorite_insert.php?id=<?= $row['id'] ?>">お気に入りに追加</a></p> -->
 </body>
 
 </html>

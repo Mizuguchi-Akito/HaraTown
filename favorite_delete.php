@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <?php require 'menu.php'; ?>
     <?php
     if (isset($_SESSION['customer'])) {
         require 'db_connect.php';

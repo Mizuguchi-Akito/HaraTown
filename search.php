@@ -58,7 +58,7 @@
 			$id = $row['id'];
 		?>
 			<tr>
-				<td class="product_db"><a href="detail.php?id=<?= $id ?>"><?= $row['name'] ?></a>
+				<td class="product_db"><a href="datail.php?id=<?= $id ?>"><?= $row['name'] ?></a>
 				</td>
 				<td class="product_db"><?= $row['price'] ?></td>
 				<td class="product_db"><?= $row['brand'] ?></td>

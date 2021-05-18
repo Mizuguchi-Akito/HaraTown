@@ -16,7 +16,7 @@ if (!empty($_SESSION['product'])) {
 		?>
 			<tr>
 				<td><?= $id ?></td>
-				<td><a href="detail.php?id=<?= $id ?>"><?= $product['name'] ?></a></td>
+				<td><a href="datail.php?id=<?= $id ?>"><?= $product['name'] ?></a></td>
 				<td><?= $product['price'] ?></td>
 				<td><?= $product['count'] ?></td>
 				<?php
@@ -24,7 +24,7 @@ if (!empty($_SESSION['product'])) {
 				$total += $subtotal;
 				?>
 				<td><?= $subtotal ?></td>
-				<td><a href="cart_delete.php?id=<?= $id ?>">削除</a></td>
+				<td><a href="cart_delete.php?id=<?= $id ?>"><button>カートから削除</button></a></td>
 			</tr>
 		<?php
 		}

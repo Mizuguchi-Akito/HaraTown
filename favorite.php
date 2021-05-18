@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
     <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/favorite.css">
 <body>
     <?php require 'menu.php'; ?>
     <?php
     if (isset($_SESSION['customer'])) {
     ?>
         <table>
-            <th>商品番号</th>
+            <th>商品画像</th>
             <th>商品名</th>
             <th>価格</th>
             <th>ブランド名</th>
@@ -25,10 +27,13 @@
                 $id = $row['id'];
             ?>
                 <tr>
-                    <td><?= $id ?></td>
+                    <td><p class="p"><img src="image/<?= $row['id'] ?>.jpeg" class="clothes_sub"></p></td>
                     <td><a href="datail.php?id=<?= $id ?>"><?= $row['name'] ?></a></td>
                     <td><?= $row['price'] ?></td>
-                    <td><a href="favorite_delete.php?id=<?= $id ?>">削除</a></td>
+                    <td><?= $row['brand'] ?></td>
+                    <td><?= $row['color'] ?></td>
+                    <td><?= $row['size'] ?></td>
+                    <td><a href="favorite_delete.php?id=<?= $id ?>"><button>この商品を削除</button></a></td>
                 </tr>
             <?php
             }
