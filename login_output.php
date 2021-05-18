@@ -27,7 +27,10 @@
         $_SESSION['customer'] = [
             'id' => $row['id'], 
             'login' =>$row['login'],
-            'password' => $row['password']
+            'password' => $row['password'],
+            'name' => $row['name'],
+            'address' => $row['address'],
+            'credit' => $row['credit'],
         ];
     }
 ?>

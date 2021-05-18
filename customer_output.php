@@ -14,25 +14,25 @@
 	<?php require 'menu.php'; ?>
 	
 	<?php
-		if(isset($_POST["name"]) && 
-		isset($_POST["address"]) && 
-		isset($_POST["login"]) && 
-        isset($_POST["password"]) && 
-        isset($_POST["credit"]) && 
-        isset($_POST["credit_date"]) && 
-        isset($_POST["credit_pass"]) && 
-		isset($_POST["credit_name"])){
-
-            
+		echo $_POST['password'];
+		if(!empty($_POST["name"]) && 
+		!empty($_POST["address"]) && 
+		!empty($_POST["login"]) && 
+        !empty($_POST["password"]) && 
+        !empty($_POST["credit"]) && 
+        !empty($_POST["credit_date"]) && 
+        !empty($_POST["credit_pass"]) && 
+		!empty($_POST["credit_name"])){
+			
+			
 			$name = htmlspecialchars($_POST["name"]);
 			$address = htmlspecialchars($_POST["address"]);
 			$login = htmlspecialchars($_POST["login"]);
-            $password = htmlspecialchars($_POST["password"]);
+            $password_second = htmlspecialchars($_POST["password"]);
             $credit = htmlspecialchars($_POST["credit"]);
             $credit_date = htmlspecialchars($_POST["credit_date"]);
             $credit_pass = htmlspecialchars($_POST["credit_pass"]);
             $credit_name = htmlspecialchars($_POST["credit_name"]);
-			// echo $password;
 
 			$pdo;
 			require_once("db_connect.php");
@@ -45,7 +45,7 @@
 				$stm->bindValue(":name" , $name , PDO::PARAM_STR);
 				$stm->bindValue(":address" , $address , PDO::PARAM_STR);
 				$stm->bindValue(":login" , $login , PDO::PARAM_STR);
-                $stm->bindValue(":password" , $password , PDO::PARAM_STR);
+                $stm->bindValue(":password" , $password_second , PDO::PARAM_STR);
                 $stm->bindValue(":credit", $credit , PDO::PARAM_STR);
                 $stm->bindValue(":credit_date", $credit_date , PDO::PARAM_STR);
                 $stm->bindValue(":credit_pass", $credit_pass , PDO::PARAM_STR);
@@ -61,6 +61,8 @@
 
 				exit();
 			}
+		}else{
+			echo "情報が足りません";
 		}
 	?>
 </body>

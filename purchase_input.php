@@ -14,9 +14,11 @@
 	
 	<?php
 		if(!empty($_SESSION["product"])){
-			printf("氏名 : %s様<br> お届け先 : %s<br>",
+			printf("氏名 : %s様<br> お届け先 : %s<br> クレジット下四桁 : %s<br>" ,
 			$_SESSION["customer"]["name"],
-			$_SESSION["customer"]["address"]);
+			$_SESSION["customer"]["address"],
+			substr($_SESSION["customer"]["credit"],12 , 4)
+		);
 	
 	require_once("cart.php");
 	
