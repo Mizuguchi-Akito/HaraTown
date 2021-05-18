@@ -31,6 +31,7 @@
             'name' => $row['name'],
             'address' => $row['address'],
             'credit' => $row['credit'],
+            'credit_name' => $row['credit_name'],
         ];
     }
 ?>

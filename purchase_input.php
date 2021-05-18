@@ -11,12 +11,14 @@
 
 <body>
 
-	
+	<h3>購入確認</h3>
+
 	<?php
 		if(!empty($_SESSION["product"])){
-			printf("氏名 : %s様<br> お届け先 : %s<br> クレジット下四桁 : %s<br>" ,
+			printf("氏名 : %s　様<br> お届け先 : %s<br> 使用するクレジットのお名前 : %s<br> クレジット下四桁 : %s<br>" ,
 			$_SESSION["customer"]["name"],
 			$_SESSION["customer"]["address"],
+			$_SESSION['customer']['credit_name'],
 			substr($_SESSION["customer"]["credit"],12 , 4)
 		);
 	
