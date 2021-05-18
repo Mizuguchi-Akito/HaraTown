@@ -38,9 +38,9 @@
                             </div>
                             <p class="p"><img src="image/<?= $row['id'] ?>.jpeg" class="clothes"></p>
                             <!-- <p class="item_"><?= $row['name'] ?></p> -->
-                            <p>ブランド:<?= $row['brand'] ?></p>
-                            <p>プライス:<?= $row['price'] ?></p>
-                            <a href="./datail.php?id=<?= $row['id'] ?>">この服の詳細へ</a>
+                            <p>Brand : <?= $row['brand'] ?></p>
+                            <p>Price : <?= $row['price'] ?></p>
+                            <a href="./datail.php?id=<?= $row['id'] ?>"><input type="button" class="button" value="この服の詳細へ"></input></a>
                     </div>
                 <?php
                         }

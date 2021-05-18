@@ -5,22 +5,30 @@
 <head>
 	<meta charset="UTF-8">
 	<title>商品検索</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/search.css">
 	<link rel="stylesheet" href="css/style3.css">
 </head>
 
 <body>
 
 	<?php require 'menu.php'; ?>
-	<form action="search.php" method="post">
-		商品検索
-		<input type="text" name="keyword">
-		<input type="submit" value="検索">
-	</form>
-	<table>
-		<th>商品名</th>
-		<th>価格</th>
-        <th>ブランド</th>
+	<div class="seachbar">
+		<form id="searchform" role="search" action="search.php" method="post">
+			<input class="s" name="keyword" type="text" placeholder="Search" />
+			<input class="searchsubmit" type="submit" value="検索" />
+		</form>
+	</div>
+
+
+	<table class="search_table">
+		<th class="product_table">商品名</th>
+		<th class="product_table">価格</th>
+		<th class="product_table">ブランド</th>
 		<?php
 		//MySQLデータベースに接続する
 		require 'db_connect.php';
@@ -50,10 +58,10 @@
 			$id = $row['id'];
 		?>
 			<tr>
-				<td><a href="detail.php?id=<?= $id ?>"><?= $row['name'] ?></a>
+				<td class="product_db"><a href="detail.php?id=<?= $id ?>"><?= $row['name'] ?></a>
 				</td>
-				<td><?= $row['price'] ?></td>
-                <td><?= $row['brand'] ?></td>
+				<td class="product_db"><?= $row['price'] ?></td>
+				<td class="product_db"><?= $row['brand'] ?></td>
 			</tr>
 		<?php
 		}
