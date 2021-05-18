@@ -29,7 +29,8 @@
 	<?php require 'favorite.php';
 	} else {
 	?>
-		お気に入りに商品を追加するには、ログインしてください。
+        <h3>お気に入りに商品を追加するには、ログインしてください。</h3>
+        <p><a href="./login_input.php">ログインへ</a></p>
 	<?php
 	}
 	?>

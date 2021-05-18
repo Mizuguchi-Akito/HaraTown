@@ -43,7 +43,7 @@ if (isset($_SESSION['customer'])) {
 <ul class="p">
 	<li class="p"><a id="logout_input.php" href="logout_input.php">ログアウト</a></li>
     <li class="p"><a id="Main_Top.php" href="Main_Top.php">TOP</a></li>
-    <li class="p"><a href="1" href="1">履歴</a></li>
+    <li class="p"><a href="history.php" href="history.php">履歴</a></li>
     <li class="p"><a id="favorite.php" href="favorite.php">お気に入り</a></li>
     <li class="p"><a id="search.php" href="search.php">商品検索</a></li>
     <li class="p"><a id="cart.php" href="cart.php">カート</a></li>

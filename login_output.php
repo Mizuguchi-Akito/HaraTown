@@ -49,7 +49,9 @@
         } else {
             echo 'ログイン名またはパスワードが違います。','<br>';
             ?>
-                <a href="./Main_Top.php">TOPへ戻る</a>
+                <a href="./Main_Top.php">TOPへ戻る</a><br>
+                <a href="./customer_input.php">会員登録へ</a><br>
+                <a href="./"></a>
             <?php
         }
     ?>
