@@ -6,8 +6,8 @@ unset($_SESSION['customer']);
 try {
     $pdo = new PDO(
         'mysql:dbname=HaraTown;host=localhost;charset=utf8mb4',
-        'phpuser2',
-        '1234'
+        'root',
+        ''
     );
     $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

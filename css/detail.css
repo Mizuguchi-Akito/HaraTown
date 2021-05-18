@@ -1,0 +1,241 @@
+.clothes_detail {
+  width: 450px;
+  height: 630px;
+  object-fit: cover;
+  float: left;
+}
+
+.product_detail {
+  padding-left: 40%;
+  height: 300px;
+}
+
+.favorite {
+  clear: both;
+  padding-top: 5%;
+  padding-right: 10%;
+}
+
+.product_name {
+  font-size: large;
+}
+.price {
+  font-size: xx-large;
+}
+
+.tax {
+  display: inline;
+  color: rgb(143, 143, 143);
+}
+
+.detail_line {
+  position: relative;
+  padding-left: 25px;
+  font-size: larger;
+}
+
+/* ショップボタン */
+.cart_in {
+  padding-left: 70%;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 5%; /* 角丸       */
+  font-size: 15pt; /* 文字サイズ */
+  text-align: center; /* 文字位置   */
+  cursor: pointer; /* カーソル   */
+  padding: 12px 12px; /* 余白       */
+  background: #000000; /* 背景色     */
+  color: #ffffff; /* 文字色     */
+  line-height: 1em; /* 1行の高さ  */
+  transition: 0.3s; /* なめらか変化 */
+  border: 2px solid #000000; /* 枠の指定 */
+  margin-right: 10%;
+}
+.button:hover {
+  color: #000000; /* 背景色     */
+  background: #ffffff; /* 文字色     */
+}
+
+/* 個数 */
+
+.cp_ipselect {
+  position: relative;
+  width: 40%;
+  margin: 2em auto;
+  text-align: center;
+  padding-right: 10px;
+  float: left;
+}
+.cp_sl06 {
+  position: relative;
+  font-family: inherit;
+  background-color: transparent;
+  width: 100%;
+  padding: 10px 10px 10px 0;
+  font-size: 18px;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.cp_sl06:focus {
+  outline: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+.cp_ipselect .cp_sl06 {
+  appearance: none;
+  -webkit-appearance: none;
+}
+.cp_ipselect select::-ms-expand {
+  display: none;
+}
+.cp_ipselect:after {
+  position: absolute;
+  top: 18px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: "";
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
+.cp_sl06_selectlabel {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  top: 10px;
+  transition: 0.2s ease all;
+}
+.cp_sl06:focus ~ .cp_sl06_selectlabel,
+.cp_sl06:valid ~ .cp_sl06_selectlabel {
+  color: #000000;
+  top: -20px;
+  transition: 0.2s ease all;
+  font-size: 14px;
+}
+.cp_sl06_selectbar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.cp_sl06_selectbar:before,
+.cp_sl06_selectbar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #000000;
+  transition: 0.2s ease all;
+}
+.cp_sl06_selectbar:before {
+  left: 50%;
+}
+.cp_sl06_selectbar:after {
+  right: 50%;
+}
+.cp_sl06:focus ~ .cp_sl06_selectbar:before,
+.cp_sl06:focus ~ .cp_sl06_selectbar:after {
+  width: 50%;
+}
+.cp_sl06_highlight {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  padding: 30px;
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+a.btn-svg {
+  font-weight: 700;
+  line-height: 54px;
+
+  width: 204px;
+  height: 54px;
+  padding: 0;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  background-color: transparent;
+}
+
+a.btn-svg svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+a.btn-svg svg rect {
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+
+  stroke: #000;
+  stroke-width: 2;
+  stroke-dasharray: 200px, 16px;
+  stroke-dashoffset: 70px;
+}
+
+a.btn-svg:hover svg rect {
+  stroke-dashoffset: 284px;
+}
+
+a.btn-svg span {
+  color: #000;
+}
+
+.size,
+.color {
+  font-size: medium;
+}

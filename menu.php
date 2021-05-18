@@ -11,12 +11,12 @@ if (!(isset($_SESSION['customer']))) {
             <span class="bar"></span>
         </div>
 
-        <ul class="1">
-            <li class="1"><a id="login_input.php" href="login_input.php">ログイン</a></li>
-            <li class="1"><a id="Main_Top.php" href="Main_Top.php">TOP</a></li>
-            <li class="1"><a id="customer_input.php" href="customer_input.php">会員登録</a></li>
-            <li class="1"><a id="search.php" href="search.php">商品検索</a></li>
-            <li class="1"><a id="cart.php" href="cart.php">カート</a></li>
+        <ul class="p">
+            <li class="p"><a id="login_input.php" href="login_input.php">ログイン</a></li>
+            <li class="p"><a id="Main_Top.php" href="Main_Top.php">TOP</a></li>
+            <li class="p"><a id="customer_input.php" href="customer_input.php">会員登録</a></li>
+            <li class="p"><a id="search.php" href="search.php">商品検索</a></li>
+            <li class="p"><a id="cart.php" href="cart.php">カート</a></li>
         </ul>
     </label>
     <!-- <a href="login_input.php">ログイン</a><br>
@@ -40,14 +40,14 @@ if (isset($_SESSION['customer'])) {
             <span class="bar"></span>
         </div>
 
-        <ul class="1">
-            <li class="1"><a id="logout_input.php" href="logout_input.php">ログアウト</a></li>
-            <li class="1"><a id="Main_Top.php" href="Main_Top.php">TOP</a></li>
-            <li class="1"><a href="1" href="1">履歴</a></li>
-            <li class="1"><a id="favorite.php" href="favorite.php">お気に入り</a></li>
-            <li class="1"><a id="search.php" href="search.php">商品検索</a></li>
-            <li class="1"><a id="cart.php" href="cart.php">カート</a></li>
-            <li class="1"><a id="purchase_input.php" href="purchase_input.php">カートの物を購入する</a></li>
+        <ul class="p">
+            <li class="p"><a id="logout_input.php" href="logout_input.php">ログアウト</a></li>
+            <li class="p"><a id="Main_Top.php" href="Main_Top.php">TOP</a></li>
+            <li class="p"><a href="1" href="1">履歴</a></li>
+            <li class="p"><a id="favorite.php" href="favorite.php">お気に入り</a></li>
+            <li class="p"><a id="search.php" href="search.php">商品検索</a></li>
+            <li class="p"><a id="cart.php" href="cart.php">カート</a></li>
+            <li class="p"><a id="purchase_input.php" href="purchase_input.php">カートの物を購入する</a></li>
         </ul>
     </label>
     <!-- <a href="./logout_input.php">ログアウト</a><br>

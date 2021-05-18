@@ -4,6 +4,9 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+.p {
+  font-size: medium;
+}
 .menu {
   display: block;
   overflow: hidden;
