@@ -17,15 +17,16 @@ try {
     exit();
 }
 
-$sql = "select * from customer where name = :name and password = :password";
+$sql = "select * from customer where login = :login and password = :password";
 $stm = $pdo->prepare($sql);
-$stm->bindValue(':name', $_POST['name'], PDO::PARAM_STR);
+$stm->bindValue(':login', $_POST['login'], PDO::PARAM_STR);
 $stm->bindValue(':password', $_POST['password'], PDO::PARAM_STR);
 $stm->execute();
 $result = $stm->fetchAll(PDO::FETCH_ASSOC);
 foreach ($result as $row) {
     $_SESSION['customer'] = [
-        'id' => $row['id'], 'name' => $row['name'],
+        'id' => $row['id'],
+        'login' => $row['login'],
         'password' => $row['password']
     ];
 }
@@ -42,12 +43,13 @@ foreach ($result as $row) {
 <body>
     <?php
     if (isset($_SESSION['customer'])) {
-        echo 'ログインしました。';
+        echo '<h3>ログインしました。</h3>';
+        echo '<p>おかえりなさいませ。</p>';
     ?>
         <a href="./Main_Top.php">TOPへ戻る</a>
     <?php
     } else {
-        echo 'ログイン名またはパスワードが違います。';
+        echo 'ログイン名またはパスワードが違います。', '<br>';
     ?>
         <a href="./Main_Top.php">TOPへ戻る</a>
     <?php

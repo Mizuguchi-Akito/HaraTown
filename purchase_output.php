@@ -1,38 +1,59 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<title>購入画面</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style3.css">
 </head>
+
 <body>
 	<?php require 'menu.php'; ?>
-	
 	<?php
-	    require 'db_connect.php';
-		$purchase_id = 1;
-		foreach ($pdo->query('select max(id) from purchase') as $row) {
-			$purchase_id = $row['max(id)'] + 1;
+	if (empty($_SESSION["customer"]) || empty($_SESSION["product"])) {
+		echo "<p class=big>ログインしていないか、カートに商品がありません</p>";
+	} else {
+		$customerId = $_SESSION["customer"]["id"];
+		$pdo;
+		require_once("db_connect.php");
+
+		$maxId = 1;
+		foreach ($pdo->query("SELECT max(id) FROM purchase;") as $row) {
+			$maxId = $row["max(id)"] + 1;
 		}
-		$sql = "insert into purchase values(:id, :customer_id)";
-		$stm = $pdo->prepare($sql);
-		$stm->bindValue(':id',$purchase_id, PDO::PARAM_INT);
-		$stm->bindValue(':customer_id',$_SESSION['customer']['id'], PDO::PARAM_INT);
-		if ($stm->execute()) {
-			foreach ($_SESSION['product'] as $product_id => $product) {
-				$sql = "insert into purchase_detail values(:purchase_id,:product_id,:count)";
-				$stm = $pdo->prepare($sql);
-				$stm->bindValue(':purchase_id', $purchase_id, PDO::PARAM_INT);
-				$stm->bindValue(':product_id', $product_id, PDO::PARAM_INT);
-				$stm->bindValue(':count', $product['count'], PDO::PARAM_INT);
-				$stm->execute();
+
+		$purSql = "INSERT INTO purchase(id , customer_id ) VALUES(:id , :customer_id );";
+
+		$purStm = $pdo->prepare($purSql);
+		$purStm->bindValue(":id", $maxId, PDO::PARAM_INT);
+		$purStm->bindValue(":customer_id", $customerId, PDO::PARAM_INT);
+
+		if ($purStm->execute()) {
+			// echo "実行しました";
+			$dataStm;
+			$dataSql = "
+				INSERT INTO purchase_detail(purchase_id , product_id ,count ) 
+				VALUES(:purchase_id , :product_id ,:count);";
+
+			foreach ($_SESSION["product"] as $key => $value) {
+				$dataStm = $pdo->prepare($dataSql);
+				// echo "aaaaa";
+				$dataStm->bindValue(":purchase_id", $maxId, PDO::PARAM_INT);
+				$dataStm->bindValue(":product_id", $key, PDO::PARAM_INT);
+				$dataStm->bindValue(":count", $value["count"], PDO::PARAM_INT);
+
+				$dataStm->execute();
 			}
-			unset($_SESSION['product']);
-			echo '購入手続きが完了しました。ありがとうございます。';
+			unset($_SESSION["product"]);
+			echo "<h1>商品を購入しました。</h1>";
+			echo "<p>商品ご到着までしばらくお待ちくださいませ。</p>";
 		} else {
-			echo '購入手続き中にエラーが発生しました・もう一度やり直してください。';
+			echo "購入に失敗しました";
 		}
+	}
 	?>
 </body>
+
 </html>

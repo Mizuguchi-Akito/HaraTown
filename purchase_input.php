@@ -1,30 +1,37 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<title>購入画面</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style3.css">
 </head>
+
 <body>
-	<?php require 'menu.php'; ?>
+
+
 	<?php
-		if(!isset($_SESSION['customer'])) {
-			echo '購入手続きを行うにはログインしてください。';
-		} else if(empty($_SESSION['product'])) {
-			echo 'カートに商品がありません。';
-		} else { 
-	?>
-	<p>お名前:<?= $_SESSION['customer']['name'] ?></p>
-	<p>ご住所:<?= $_SESSION['customer']['address'] ?></p>
-	<p>クレジットカード名義:<?= $_SESSION['customer']['credit_name'] ?></p>
-	<hr>
-	<?php require 'cart.php'; ?>
-	<hr>
-	<p>内容をご確認いただき、購入を確定してください。</p>
-	<a href="purchase_output.php">購入を確定する</a>
+	if (!empty($_SESSION["product"])) {
+		printf(
+			"氏名 : %s様<br> お届け先 : %s<br>",
+			$_SESSION["customer"]["name"],
+			$_SESSION["customer"]["address"]
+		);
+
+		require_once("cart.php");
+
+		if (!empty($_SESSION["product"])) { ?>
+			<a href="purchase_output.php">購入を確定する</a>
+
 	<?php
-		}
+		};
+	} else {
+		echo "<h3>カートに追加されていません。</h3>";
+		echo "<p>商品を購入するにはカートに商品を追加してください。</p>";
+	}
 	?>
 </body>
+
 </html>
