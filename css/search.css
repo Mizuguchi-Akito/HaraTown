@@ -1,0 +1,48 @@
+.s{
+    margin: 0 0 0 10px;
+    height: 28px;
+    width: 9em;
+    transition: all .6s ease;
+    border-bottom:1px solid #cccccc;
+    border-right:none;
+    border-left:none;
+    border-top:none;
+    border-radius:0px;
+    width: 20%;
+    }
+    .s:focus{
+    width:30%;
+    }
+    .searchsubmit {
+    vertical-align:top;
+    width: 35px;
+    height: 30px;
+    padding: 0;
+    font-size: 18px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: 'Kiwi Maru', serif;
+    }
+    
+  .search_table{
+    padding-top: 30px;
+    font-size: medium;
+    margin: 0 auto;
+  } 
+  
+  .seachbar{
+    padding-top: 20px;
+    text-align: center;
+  }
+  
+  .product_table{
+    font-size: large;
+    text-align: center;
+    font-family: 'Kiwi Maru', serif;
+  }
+  .product_db{
+    font-size: medium;
+    text-align: center;
+    font-family: 'Hachi Maru Pop', cursive;
+  }
