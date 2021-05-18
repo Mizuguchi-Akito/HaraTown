@@ -1,6 +1,6 @@
 <?php
-  $user = 'root';
-  $password = '';
+  $user = 'phpuser2';
+  $password = '1234';
   $dbName = 'HaraTown';
   $host = 'localhost';
   $dsn = "mysql:host={$host};dbname={$dbName};charset=utf8";
